@@ -1,9 +1,37 @@
+
+<div class="container">
 <h1>All Cocktails</h1>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-  <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-  <% end %>
-</ul>
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+    <div class="card">
+      <div class="image">
+        <%= image_tag "source", alt: "alttext" %>
+      </div>
+      <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+    <% end %>
+    </div>
+  </div>
 
 <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-outline-primary" %>
+</div>
+
+
+<!-- <div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+  <div class="card-product-infos">
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+</div>
+ -->
+
+
+<div class="card">
+    <div class="image">
+      <img src="http://1.bp.blogspot.com/-EhPr4LXcywE/Udr594sPHTI/AAAAAAAAAJ4/Tv4y4CBLTPM/s400/Cristina-Otero-2.jpg"/>
+    </div>
+    <div class="details">
+      <div class="center">
+        <h1>Someone famous<br><span>team leader</span></h1>
+        <p>Lorem ipsum is simple dummy text on the printing and typesetting industry.</p>

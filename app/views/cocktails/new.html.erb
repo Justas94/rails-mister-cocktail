@@ -1,8 +1,22 @@
 <h1>Create a cocktail</h1>
 
-<%= simple_form_for [@cocktail] do |f| %>
-  <%= f.input :name %>
-  <%= f.submit "Submit", class: "btn btn-primary" %>
-<% end %>
 
-
+<div class="login-wrap">
+  <div class="login-html">
+    <div class="login-form">
+      <div class="sign-in-htm">
+        <div class="group">
+          <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Create Cocktail</label>
+          <ul>
+          <%= simple_form_for [@cocktail] do |f| %>
+            <li>
+              <%= f.input :name %>
+              <%= f.submit "Submit", class: "btn btn-primary" %>
+            </li>
+          <% end %>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

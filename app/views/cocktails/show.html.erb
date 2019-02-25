@@ -1,10 +1,12 @@
-<h1><%= @cocktail.name %></h1>
+<div class="header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1438522014717-d7ce32b9bab9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80')">
+  <div class="container">
+    <h1><%= @cocktail.name.capitalize %></h1>
+  </div>
+</div>
 
-
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-    <li><%= dose.ingredient.name.capitalize %>: <%= dose.description.capitalize %> (<%= link_to"Delete", dose_path(@cocktail, dose), method: :delete, data: { confirm: "Are you sure?" }, class: "ml-2 text-danger" %>)</li>
-  <% end %>
-</ul>
 
   <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-outline-primary" %>
+
+
+
+

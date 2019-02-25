@@ -35,8 +35,3 @@ class DosesController < ApplicationController
 
 end
 
-
-# GET "cocktails/42/doses/new"
-# POST "cocktails/42/doses"
-
-
